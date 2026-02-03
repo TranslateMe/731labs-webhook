@@ -1,0 +1,12 @@
+services:
+  - type: web
+    runtime: node
+    name: 731labs-webhook
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: TG_BOT_TOKEN
+        sync: false
+      - key: TG_CHAT_ID
+        sync: false
